@@ -1,0 +1,2109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Assessment Framework | Council on Criminal Justice</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <nav class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <h2>AI Framework</h2>
+            <span class="draft-badge">CCJ</span>
+        </div>
+        <div class="progress-container">
+            <div class="progress-bar" id="progressBar"></div>
+            <span class="progress-text" id="progressText">0% Complete</span>
+        </div>
+        <ul class="nav-menu">
+            <li><a href="#home" class="nav-link active" data-section="home">Home</a></li>
+            <li><a href="#takeaways" class="nav-link" data-section="takeaways">Top Takeaways</a></li>
+            <li class="nav-section">
+                <span class="nav-section-title">Framework Phases</span>
+                <ul>
+                    <li><a href="#phase1" class="nav-link" data-section="phase1">Phase 1: Readiness</a></li>
+                    <li><a href="#phase2" class="nav-link" data-section="phase2">Phase 2: Classification</a></li>
+                    <li><a href="#phase3" class="nav-link" data-section="phase3">Phase 3: Procurement</a></li>
+                    <li><a href="#phase4" class="nav-link" data-section="phase4">Phase 4: Implementation</a></li>
+                    <li><a href="#phase5" class="nav-link" data-section="phase5">Phase 5: Ongoing Management</a></li>
+                </ul>
+            </li>
+            <li class="nav-section">
+                <span class="nav-section-title">Appendices</span>
+                <ul>
+                    <li><a href="#appendixA" class="nav-link" data-section="appendixA">A: Readiness Assessment</a></li>
+                    <li><a href="#appendixB" class="nav-link" data-section="appendixB">B: Prohibited Systems</a></li>
+                    <li><a href="#appendixC" class="nav-link" data-section="appendixC">C: Complexity Assessment</a></li>
+                    <li><a href="#appendixD" class="nav-link" data-section="appendixD">D: Sector Context</a></li>
+                    <li><a href="#appendixE" class="nav-link" data-section="appendixE">E: Classification Memo</a></li>
+                    <li><a href="#appendixF" class="nav-link" data-section="appendixF">F: Procurement Guide</a></li>
+                    <li><a href="#appendixG" class="nav-link" data-section="appendixG">G: Implementation Memo</a></li>
+                    <li><a href="#appendixH" class="nav-link" data-section="appendixH">H: Ongoing Monitoring</a></li>
+                    <li><a href="#appendixI" class="nav-link" data-section="appendixI">I: Reference Materials</a></li>
+                </ul>
+            </li>
+        </ul>
+        <div class="help-button" id="helpBtn">
+            <span>?</span> Need Help?
+        </div>
+    </nav>
+
+    <button class="sidebar-toggle" id="sidebarToggle">Menu</button>
+
+    <main class="content">
+        <!-- HOME SECTION -->
+        <section id="home" class="section active">
+            <!-- Hero Banner -->
+            <div class="hero-banner">
+                <img src="https://counciloncj.org/wp-content/uploads/2025/06/Square-No-Logo.jpg" alt="AI in Criminal Justice">
+                <div class="hero-banner-overlay">
+                    <h1>Criminal Justice AI Assessment Framework</h1>
+                    <p>Practical guidance for agency leaders, policymakers, and procurement officials</p>
+                </div>
+            </div>
+
+            <div class="section-header" style="border-bottom: none; margin-bottom: 1rem;">
+                <p class="subtitle">A comprehensive framework for responsible AI adoption in criminal justice</p>
+            </div>
+
+            <div class="intro-card">
+                <p>Criminal justice agencies face urgent questions about AI adoption: <strong>Should we use this tool? What safeguards are needed?</strong> This framework provides practical, operational guidance for agency leaders, policymakers, and procurement officials to decide <em>if</em> and <em>how</em> to implement an AI tool.</p>
+            </div>
+
+            <div class="context-section">
+                <h2>The Unique Context of Criminal Justice AI</h2>
+                <p>While many AI governance frameworks exist, they often speak in generalities that leave criminal justice practitioners uncertain about specific implementation steps. This framework makes a unique contribution by translating broad AI principles into actionable criminal justice requirements:</p>
+                <ul class="feature-list">
+                    <li><strong>Constitutional and due process considerations</strong> tailored specifically to criminal justice applications</li>
+                    <li><strong>Concrete procurement and implementation steps</strong> that address the practical realities of agency operations</li>
+                    <li><strong>Ready-to-use checklists and templates</strong> that can be adapted to your jurisdiction's needs</li>
+                </ul>
+            </div>
+
+            <div class="audience-section">
+                <h2>Using This Framework</h2>
+                <p>This framework is designed for multiple audiences within the criminal justice ecosystem:</p>
+                <div class="audience-grid">
+                    <div class="audience-card">
+                        <h3>Primary Audiences</h3>
+                        <p>Agency leaders, policymakers, procurement officials, legal counsel, technology directors, and program managers.</p>
+                    </div>
+                    <div class="audience-card">
+                        <h3>Supporting Stakeholders</h3>
+                        <p>Oversight bodies, auditors, community advocates, civil liberties organizations, and vendor partners.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="info-box warning">
+                <h3>Important Note on AI Classification</h3>
+                <p>This framework is designed for use specifically with AI systems opposed to other common forms of technology or software. <strong>Use of this framework assumes that the user already has clarity on whether the tool in question should be classified as AI</strong> that could substantially influence decisions (as opposed to purely procedural tools like spell-check or spreadsheets), or that the user has the knowledge or external support necessary to make such a determination.</p>
+            </div>
+
+            <div class="usage-scenarios">
+                <h2>Different Starting Points</h2>
+                <div class="scenario-cards">
+                    <div class="scenario-card">
+                        <h3>Already Identified a Specific AI System?</h3>
+                        <p>By default, this framework assumes you have already identified a specific AI system for evaluation. The assessment phases are designed to evaluate that particular system's characteristics, risks, and opportunities before making procurement and implementation decisions.</p>
+                        <a href="#phase1" class="btn btn-primary" onclick="navigateTo('phase1')">Start with Phase 1</a>
+                    </div>
+                    <div class="scenario-card">
+                        <h3>Conducting Open Procurement?</h3>
+                        <p>If you haven't yet selected a specific vendor or system, use this framework differently: First, conduct a high-level assessment to determine whether your agency should pursue this category of tool at all. Assess each finalist proposal using the risk and opportunity frameworks before making your selection.</p>
+                        <a href="#appendixA" class="btn btn-secondary" onclick="navigateTo('appendixA')">Start with Readiness Assessment</a>
+                    </div>
+                    <div class="scenario-card">
+                        <h3>Exploring Whether AI Might Help?</h3>
+                        <p>If you have no specific tools in mind, begin with Phase 1 (readiness assessment) and the sector context guidance to understand how AI might intersect with your current practices. Consider whether problems might be better addressed through policy changes, training, or increased resources.</p>
+                        <a href="#appendixD" class="btn btn-secondary" onclick="navigateTo('appendixD')">Review Sector Context</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="critical-thinking">
+                <h2>A Call for Critical Thinking</h2>
+                <p>This framework provides a structured pathway for critical thinking. The questions, tables, and examples are meant to be illustrative guides, not rigid decision trees. We expect users to:</p>
+                <ul class="expectation-list">
+                    <li>Engage thoughtfully with difficult questions about fairness, bias, and constitutional compliance</li>
+                    <li>Challenge assumptions about what technology can and should do in justice settings</li>
+                    <li>Be prepared to say no if safeguards cannot be adequately implemented</li>
+                    <li>Leverage domain expertise, legal obligations, and contextual nuance throughout the process</li>
+                </ul>
+            </div>
+
+            <div class="cta-section">
+                <h2>Ready to Begin?</h2>
+                <p>Start by reviewing the Top Takeaways, then proceed through the five phases in order.</p>
+                <a href="#takeaways" class="btn btn-large btn-primary" onclick="navigateTo('takeaways')">View Top Takeaways</a>
+            </div>
+        </section>
+
+        <!-- TOP TAKEAWAYS SECTION -->
+        <section id="takeaways" class="section">
+            <div class="section-header">
+                <h1>Top Takeaways</h1>
+            </div>
+            <div class="takeaways-grid">
+                <div class="takeaway-card">
+                    <span class="takeaway-number">1</span>
+                    <h3>Assess organizational readiness first</h3>
+                    <p>Before evaluating any specific AI tool, honestly assess whether your agency has the capacity, expertise, and infrastructure for responsible AI adoption.</p>
+                </div>
+                <div class="takeaway-card">
+                    <span class="takeaway-number">2</span>
+                    <h3>Screen for prohibited uses immediately</h3>
+                    <p>Some AI applications pose unacceptable risks to fundamental rights and must never be deployed, regardless of potential benefits.</p>
+                </div>
+                <div class="takeaway-card">
+                    <span class="takeaway-number">3</span>
+                    <h3>Use multidisciplinary assessment teams</h3>
+                    <p>Include legal, operational, technical, and community representatives in evaluating any AI system, with enhanced expertise for substantial-risk systems.</p>
+                </div>
+                <div class="takeaway-card">
+                    <span class="takeaway-number">4</span>
+                    <h3>Require rigorous, independent validation</h3>
+                    <p>Never rely solely on vendor claims. Demand independent evidence of performance, especially for substantial-risk systems.</p>
+                </div>
+                <div class="takeaway-card">
+                    <span class="takeaway-number">5</span>
+                    <h3>Establish robust procurement protections</h3>
+                    <p>Contracts must address performance standards, demographic equity, data rights, auditability, liability, and termination rights before any system is acquired.</p>
+                </div>
+                <div class="takeaway-card">
+                    <span class="takeaway-number">6</span>
+                    <h3>Calibrate procurement and deployment for risk</h3>
+                    <p>Contracts must include specific terms for performance, data rights, auditing, and liability. The type of AI system and its inputs/outputs help determine the relevant risk-level.</p>
+                </div>
+                <div class="takeaway-card">
+                    <span class="takeaway-number">7</span>
+                    <h3>Mandate user training</h3>
+                    <p>Train operators on the AI's limitations and how to prevent automation bias.</p>
+                </div>
+                <div class="takeaway-card">
+                    <span class="takeaway-number">8</span>
+                    <h3>Ensure meaningful human oversight</h3>
+                    <p>AI must support, not replace, human oversight. Train operators on automation bias and guarantee their authority to override system recommendations.</p>
+                </div>
+                <div class="takeaway-card">
+                    <span class="takeaway-number">9</span>
+                    <h3>Conduct ongoing assessment and evaluation</h3>
+                    <p>Monitor AI performance on an on-going basis and formally reassess it at least annually.</p>
+                </div>
+                <div class="takeaway-card">
+                    <span class="takeaway-number">10</span>
+                    <h3>Engage the community directly</h3>
+                    <p>Ensure that community voice is integrated from the outset of the process.</p>
+                </div>
+            </div>
+            <div class="nav-buttons">
+                <a href="#home" class="btn btn-secondary" onclick="navigateTo('home')">Back to Overview</a>
+                <a href="#phase1" class="btn btn-primary" onclick="navigateTo('phase1')">Begin Phase 1</a>
+            </div>
+        </section>
+
+        <!-- PHASE 1 SECTION -->
+        <section id="phase1" class="section">
+            <div class="section-header">
+                <div class="phase-badge">Phase 1</div>
+                <h1>Assess Your Readiness</h1>
+            </div>
+
+            <div class="intro-card">
+                <p>Adopting AI is not merely a technical choice; it is a policy decision with profound implications for justice, equity, and public trust. Before evaluating a specific AI tool, your agency should first conduct an honest assessment of its own readiness.</p>
+                <p><strong>Not every jurisdiction needs to rush toward AI adoption.</strong> In some cases, the most responsible decision is to first invest in building foundational capacity.</p>
+            </div>
+
+            <div class="info-box">
+                <h3>Key Question</h3>
+                <p>If your agency is not ready to use AI tools responsibly, this framework can help you identify the gaps. Use the AI Readiness Assessment Worksheet to evaluate your organization's current capacity in key areas.</p>
+            </div>
+
+            <div class="action-card">
+                <h3>Complete the Readiness Assessment</h3>
+                <p>Evaluate your organization's foundational capacity before beginning an assessment of a specific AI tool.</p>
+                <a href="#appendixA" class="btn btn-primary" onclick="navigateTo('appendixA')">Go to Readiness Assessment (Appendix A)</a>
+            </div>
+
+            <div class="checklist-summary">
+                <h3>Key Areas to Assess</h3>
+                <ul>
+                    <li><strong>Data Governance:</strong> Clear policies for data quality, collection, storage, and sharing</li>
+                    <li><strong>Technical Capacity:</strong> Staff expertise and IT infrastructure</li>
+                    <li><strong>Legal & Policy Framework:</strong> Internal policies and legal counsel</li>
+                    <li><strong>Organizational Culture:</strong> Leadership buy-in and staff training</li>
+                    <li><strong>Community Engagement:</strong> Established channels and trust with communities</li>
+                </ul>
+            </div>
+
+            <div class="info-box warning">
+                <h3>Important</h3>
+                <p>If this assessment reveals significant gaps, address them before proceeding with AI deployment.</p>
+            </div>
+
+            <div class="nav-buttons">
+                <a href="#takeaways" class="btn btn-secondary" onclick="navigateTo('takeaways')">Back to Takeaways</a>
+                <a href="#phase2" class="btn btn-primary" onclick="navigateTo('phase2')">Continue to Phase 2</a>
+            </div>
+        </section>
+
+        <!-- PHASE 2 SECTION -->
+        <section id="phase2" class="section">
+            <div class="section-header">
+                <div class="phase-badge">Phase 2</div>
+                <h1>Classification</h1>
+            </div>
+
+            <div class="intro-card">
+                <p>The goal of this phase is to produce a <strong>Classification Memo</strong> (see Appendix E) that analyzes the AI system and recommends a path forward.</p>
+            </div>
+
+            <div class="steps-container">
+                <!-- Step 1 -->
+                <div class="step-card">
+                    <div class="step-header">
+                        <span class="step-number">1</span>
+                        <h3>Assemble Your Assessment Team</h3>
+                    </div>
+                    <div class="step-content">
+                        <div class="requirement-box">
+                            <h4>Required for ALL Systems:</h4>
+                            <ul>
+                                <li>An operational leader</li>
+                                <li>A legal/constitutional expert</li>
+                                <li>End-users</li>
+                            </ul>
+                        </div>
+                        <div class="requirement-box highlight">
+                            <h4>ADD for Substantial Risk Systems:</h4>
+                            <ul>
+                                <li>A sector specialist</li>
+                                <li>Community representatives</li>
+                                <li>A technical expert (for complex systems)</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="step-card">
+                    <div class="step-header">
+                        <span class="step-number">2</span>
+                        <h3>Screen for Prohibited Uses</h3>
+                    </div>
+                    <div class="step-content">
+                        <div class="info-box danger">
+                            <p>Some AI applications pose an unacceptable risk to fundamental rights and are prohibited in the criminal justice context.</p>
+                            <p><strong>If you answer YES to ANY question below, the system is PROHIBITED.</strong></p>
+                        </div>
+
+                        <form id="prohibitedScreener" class="screening-form">
+                            <div class="screening-question">
+                                <label>
+                                    <input type="radio" name="q1" value="yes" class="prohibited-check"> YES
+                                    <input type="radio" name="q1" value="no" class="prohibited-check"> NO
+                                    <span>Does the system make autonomous decisions about liberty (e.g., detention, sentencing) without the possibility of meaningful human review?</span>
+                                </label>
+                            </div>
+                            <div class="screening-question">
+                                <label>
+                                    <input type="radio" name="q2" value="yes" class="prohibited-check"> YES
+                                    <input type="radio" name="q2" value="no" class="prohibited-check"> NO
+                                    <span>Does the system eliminate or fundamentally impair an individual's right to understand, challenge, or contest a decision affecting their rights?</span>
+                                </label>
+                            </div>
+                            <div class="screening-question">
+                                <label>
+                                    <input type="radio" name="q3" value="yes" class="prohibited-check"> YES
+                                    <input type="radio" name="q3" value="no" class="prohibited-check"> NO
+                                    <span>Does the system circumvent or undermine established legal or constitutional protections (e.g., due process, equal protection)?</span>
+                                </label>
+                            </div>
+                            <div class="screening-question">
+                                <label>
+                                    <input type="radio" name="q4" value="yes" class="prohibited-check"> YES
+                                    <input type="radio" name="q4" value="no" class="prohibited-check"> NO
+                                    <span>Does the system create mass surveillance of lawful, constitutionally protected activities (e.g., First Amendment activities)?</span>
+                                </label>
+                            </div>
+                            <div class="screening-question">
+                                <label>
+                                    <input type="radio" name="q5" value="yes" class="prohibited-check"> YES
+                                    <input type="radio" name="q5" value="no" class="prohibited-check"> NO
+                                    <span>Does the system target individuals primarily based on protected characteristics such as race, religion, or national origin?</span>
+                                </label>
+                            </div>
+                            <div class="screening-question">
+                                <label>
+                                    <input type="radio" name="q6" value="yes" class="prohibited-check"> YES
+                                    <input type="radio" name="q6" value="no" class="prohibited-check"> NO
+                                    <span>Does the system manipulate, alter, or fabricate evidence?</span>
+                                </label>
+                            </div>
+                            <div class="screening-question">
+                                <label>
+                                    <input type="radio" name="q7" value="yes" class="prohibited-check"> YES
+                                    <input type="radio" name="q7" value="no" class="prohibited-check"> NO
+                                    <span>Does the system systematically undermine human dignity?</span>
+                                </label>
+                            </div>
+                            <div class="screening-question">
+                                <label>
+                                    <input type="radio" name="q8" value="yes" class="prohibited-check"> YES
+                                    <input type="radio" name="q8" value="no" class="prohibited-check"> NO
+                                    <span>Would rights violations occur regardless of any safeguards put in place?</span>
+                                </label>
+                            </div>
+                            <div id="prohibitedResult" class="result-box hidden"></div>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="step-card">
+                    <div class="step-header">
+                        <span class="step-number">3</span>
+                        <h3>Assess System Complexity and Interpretability</h3>
+                    </div>
+                    <div class="step-content">
+                        <p>Evaluate the system's technical characteristics. More complex, opaque ("black box") systems require more scrutiny and more robust safeguards.</p>
+                        <a href="#appendixC" class="btn btn-secondary" onclick="navigateTo('appendixC')">Go to Complexity Assessment (Appendix C)</a>
+                    </div>
+                </div>
+
+                <!-- Step 4 -->
+                <div class="step-card">
+                    <div class="step-header">
+                        <span class="step-number">4</span>
+                        <h3>Consider the Sector Context</h3>
+                    </div>
+                    <div class="step-content">
+                        <p>Before assigning a general risk or opportunity score, analyze how the AI tool will change your <strong>current practices</strong>. An AI system does not exist in a vacuum; its impact is relative to the baseline with which it intersects.</p>
+                        <div class="info-box">
+                            <p><strong>Key Question:</strong> A high-stakes context doesn't automatically mean AI increases risk. Rather, the core question is whether AI makes the existing process more or less risky, fair, and effective.</p>
+                        </div>
+                        <a href="#appendixD" class="btn btn-secondary" onclick="navigateTo('appendixD')">Review Sector Context Guidance (Appendix D)</a>
+                    </div>
+                </div>
+
+                <!-- Step 5 -->
+                <div class="step-card">
+                    <div class="step-header">
+                        <span class="step-number">5</span>
+                        <h3>Determine Risk and Opportunity Levels</h3>
+                    </div>
+                    <div class="step-content">
+                        <h4>Risk Assessment</h4>
+                        <div class="assessment-table">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Risk Level</th>
+                                        <th>Liberty Impact</th>
+                                        <th>Rights Impact</th>
+                                        <th>Error Consequences</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="risk-low">
+                                        <td><span class="risk-badge low">LOW</span></td>
+                                        <td>Unlikely. No direct effect on an individual's liberty.</td>
+                                        <td>Unlikely. Does not affect procedural or constitutional rights.</td>
+                                        <td>Easily corrected. Errors are easy to identify and fix with minimal harm.</td>
+                                    </tr>
+                                    <tr class="risk-substantial">
+                                        <td><span class="risk-badge substantial">SUBSTANTIAL</span></td>
+                                        <td>Moderate-High. Affects or influences arrest, detention, bail, charging, or sentencing decisions.</td>
+                                        <td>Affects procedural rights or access to justice. Involves surveillance or processes sensitive personal data.</td>
+                                        <td>Significant harm possible. Errors could lead to wrongful detention or rights violations.</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <h4>Risk Classification Questions</h4>
+                        <p>If the answer is YES to any of the following, the system is likely <strong>SUBSTANTIAL RISK</strong>:</p>
+                        <form id="riskClassification" class="classification-form">
+                            <label class="checkbox-item">
+                                <input type="checkbox" name="risk" value="detention"> Does it influence detention, charging, sentencing, or release decisions?
+                            </label>
+                            <label class="checkbox-item">
+                                <input type="checkbox" name="risk" value="surveillance"> Does it involve the surveillance or monitoring of individuals?
+                            </label>
+                            <label class="checkbox-item">
+                                <input type="checkbox" name="risk" value="sensitive"> Does it process sensitive personal data?
+                            </label>
+                            <label class="checkbox-item">
+                                <input type="checkbox" name="risk" value="disparate"> Could it create a disparate impact on protected groups?
+                            </label>
+                            <label class="checkbox-item">
+                                <input type="checkbox" name="risk" value="access"> Does it directly affect access to programs, services, or due process?
+                            </label>
+                            <label class="checkbox-item">
+                                <input type="checkbox" name="risk" value="wrongful"> Could errors result in wrongful detention or rights violations?
+                            </label>
+                            <label class="checkbox-item">
+                                <input type="checkbox" name="risk" value="contest"> Is there a limited ability for individuals to contest decisions?
+                            </label>
+                            <div id="riskResult" class="result-box"></div>
+                        </form>
+
+                        <h4>Opportunity Assessment</h4>
+                        <div class="assessment-table">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Opportunity Level</th>
+                                        <th>Performance Improvement</th>
+                                        <th>Evidence Quality</th>
+                                        <th>Stakeholder Support</th>
+                                        <th>Cost-Benefit</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="opp-high">
+                                        <td><span class="opp-badge high">HIGH</span></td>
+                                        <td>Substantial improvement over existing processes.</td>
+                                        <td>Strong evidence from pilots or independent research.</td>
+                                        <td>Community and end-users validate the value and helpfulness.</td>
+                                        <td>Clearly favorable.</td>
+                                    </tr>
+                                    <tr class="opp-medium">
+                                        <td><span class="opp-badge medium">MEDIUM</span></td>
+                                        <td>Meaningful improvement but may be limited in scope.</td>
+                                        <td>Some evidence exists, but validation is limited or from vendors.</td>
+                                        <td>Mixed feedback from stakeholders.</td>
+                                        <td>Suggests value.</td>
+                                    </tr>
+                                    <tr class="opp-low">
+                                        <td><span class="opp-badge low">LOW</span></td>
+                                        <td>Minimal, uncertain, or no improvement.</td>
+                                        <td>Little or no supporting evidence; claims are assumptions.</td>
+                                        <td>Skepticism about the necessity from stakeholders.</td>
+                                        <td>Does not favor AI.</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <h4>Select Opportunity Level</h4>
+                        <form id="opportunityForm" class="opportunity-form">
+                            <label class="radio-item">
+                                <input type="radio" name="opportunity" value="high"> <span class="opp-badge high">HIGH</span> - Strong evidence, stakeholder support, clear benefits
+                            </label>
+                            <label class="radio-item">
+                                <input type="radio" name="opportunity" value="medium"> <span class="opp-badge medium">MEDIUM</span> - Some evidence, mixed feedback, suggests value
+                            </label>
+                            <label class="radio-item">
+                                <input type="radio" name="opportunity" value="low"> <span class="opp-badge low">LOW</span> - Limited evidence, stakeholder skepticism, unclear benefits
+                            </label>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Step 6 -->
+                <div class="step-card">
+                    <div class="step-header">
+                        <span class="step-number">6</span>
+                        <h3>Finalize and Document Classification Decision</h3>
+                    </div>
+                    <div class="step-content">
+                        <p>With your final Risk and Opportunity levels, find your position on this matrix to determine the required course of action.</p>
+
+                        <div class="decision-matrix">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th></th>
+                                        <th>High Opportunity</th>
+                                        <th>Medium Opportunity</th>
+                                        <th>Low Opportunity</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><strong>Substantial Risk</strong></td>
+                                        <td class="matrix-cell careful">
+                                            <strong>CAREFUL IMPLEMENTATION</strong>
+                                            <p>High potential value, but also significant risks. Requires the most robust safeguards.</p>
+                                            <p><em>Action: Proceed only by applying ALL Level 1 AND Level 2 Safeguards.</em></p>
+                                        </td>
+                                        <td class="matrix-cell validate">
+                                            <strong>VALIDATE FIRST</strong>
+                                            <p>The risk-benefit balance is questionable.</p>
+                                            <p><em>Action: Requires exceptional justification to proceed. If approved, ALL Level 1 AND Level 2 Safeguards must be applied.</em></p>
+                                        </td>
+                                        <td class="matrix-cell avoid">
+                                            <strong>GENERALLY AVOID</strong>
+                                            <p>Strong presumption against implementation. High risks are not justified by low benefits.</p>
+                                            <p><em>Action: Do not proceed without a mandatory alternatives assessment.</em></p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Low Risk</strong></td>
+                                        <td class="matrix-cell deploy">
+                                            <strong>STANDARD DEPLOY</strong>
+                                            <p>These systems offer clear benefits with lesser risk.</p>
+                                            <p><em>Action: Proceed with Level 1 Safeguards.</em></p>
+                                        </td>
+                                        <td class="matrix-cell deploy">
+                                            <strong>STANDARD DEPLOY</strong>
+                                            <p>These systems seem promising but aren't clearly high-value.</p>
+                                            <p><em>Action: Verify that the actual value meets requirements during implementation and consider alternatives before finalizing.</em></p>
+                                        </td>
+                                        <td class="matrix-cell evaluate">
+                                            <strong>EVALUATE</strong>
+                                            <p>The benefits are unclear and may not be worth the investment.</p>
+                                            <p><em>Action: Conduct a rigorous cost-benefit analysis. If proceeding, use Level 1 Safeguards.</em></p>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <div class="action-card">
+                            <h4>Document Your Classification</h4>
+                            <p>Using the Classification Memo Template, document your findings from Phase 2.</p>
+                            <a href="#appendixE" class="btn btn-primary" onclick="navigateTo('appendixE')">Complete Classification Memo (Appendix E)</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="nav-buttons">
+                <a href="#phase1" class="btn btn-secondary" onclick="navigateTo('phase1')">Back to Phase 1</a>
+                <a href="#phase3" class="btn btn-primary" onclick="navigateTo('phase3')">Continue to Phase 3</a>
+            </div>
+        </section>
+
+        <!-- PHASE 3 SECTION -->
+        <section id="phase3" class="section">
+            <div class="section-header">
+                <div class="phase-badge">Phase 3</div>
+                <h1>Procurement</h1>
+            </div>
+
+            <div class="intro-card">
+                <p>If your recommendation is to proceed, you must now navigate the procurement process with the appropriate safeguards and requirements based on your system's classification. The procurement phase establishes the contractual foundation that protects your agency, ensures accountability, and maintains compliance throughout the system's lifecycle.</p>
+            </div>
+
+            <div class="steps-container">
+                <div class="step-card">
+                    <div class="step-header">
+                        <span class="step-number">1</span>
+                        <h3>Classification Memo Approval</h3>
+                    </div>
+                    <div class="step-content">
+                        <ul>
+                            <li>The Classification Memo from Phase 2 must be completed and formally approved by designated authority.</li>
+                            <li>The memo establishes the system's risk and opportunity levels, which determine procurement requirements.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="step-card">
+                    <div class="step-header">
+                        <span class="step-number">2</span>
+                        <h3>Budget and Resource Confirmation</h3>
+                    </div>
+                    <div class="step-content">
+                        <p>Confirm funding is available not just for acquisition, but for:</p>
+                        <ul>
+                            <li>Initial implementation and integration</li>
+                            <li>Staff training and change management</li>
+                            <li>Ongoing monitoring and oversight</li>
+                            <li>Independent evaluations (for Substantial Risk systems)</li>
+                            <li>Community engagement processes (for Substantial Risk systems)</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="step-card">
+                    <div class="step-header">
+                        <span class="step-number">3</span>
+                        <h3>Procurement Team Assembly</h3>
+                    </div>
+                    <div class="step-content">
+                        <div class="requirement-box">
+                            <h4>Designate a Procurement Lead with appropriate authority</h4>
+                            <p>Include representatives from:</p>
+                            <ul>
+                                <li>Legal/General Counsel</li>
+                                <li>End-user departments</li>
+                                <li>IT/Technical staff</li>
+                                <li>Finance/Budget office</li>
+                            </ul>
+                        </div>
+                        <div class="requirement-box highlight">
+                            <h4>For Substantial Risk systems, add:</h4>
+                            <ul>
+                                <li>Community representatives or liaison</li>
+                                <li>Independent technical expert (if system is complex)</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="step-card">
+                    <div class="step-header">
+                        <span class="step-number">4</span>
+                        <h3>Contract Negotiation and Essential Terms</h3>
+                    </div>
+                    <div class="step-content">
+                        <p>Contract negotiation must secure all necessary protections and requirements based on your system's classification.</p>
+                        <a href="#appendixF" class="btn btn-primary" onclick="navigateTo('appendixF')">Use Procurement Guide (Appendix F)</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="checklist-section">
+                <h3>Checklist Before Moving to Phase 4</h3>
+                <p>Before proceeding to implementation, ensure:</p>
+                <form id="phase3Checklist" class="checklist-form">
+                    <label class="checkbox-item"><input type="checkbox" name="p3check"> Contract is fully executed with all required terms</label>
+                    <label class="checkbox-item"><input type="checkbox" name="p3check"> Procurement documentation is complete and filed</label>
+                    <label class="checkbox-item"><input type="checkbox" name="p3check"> Implementation team is identified and briefed</label>
+                    <label class="checkbox-item"><input type="checkbox" name="p3check"> Resources (budget, personnel, infrastructure) are confirmed</label>
+                    <label class="checkbox-item"><input type="checkbox" name="p3check"> For Substantial Risk systems: Community engagement plan is developed</label>
+                    <label class="checkbox-item"><input type="checkbox" name="p3check"> For Substantial Risk systems: Independent oversight is arranged</label>
+                </form>
+            </div>
+
+            <div class="nav-buttons">
+                <a href="#phase2" class="btn btn-secondary" onclick="navigateTo('phase2')">Back to Phase 2</a>
+                <a href="#phase4" class="btn btn-primary" onclick="navigateTo('phase4')">Continue to Phase 4</a>
+            </div>
+        </section>
+
+        <!-- PHASE 4 SECTION -->
+        <section id="phase4" class="section">
+            <div class="section-header">
+                <div class="phase-badge">Phase 4</div>
+                <h1>Implementation</h1>
+            </div>
+
+            <div class="intro-card">
+                <p>With procurement complete and contracts executed, now move to implementation. Implementation is where theoretical safeguards and contractual promises become operational reality. This phase requires careful attention to how the system will actually function in your environment, how people will use it, and how you'll ensure it performs as intended.</p>
+            </div>
+
+            <div class="action-card">
+                <h4>Complete the Implementation Memorandum</h4>
+                <p>Before any system goes live, complete the Implementation Memorandum Template. This document serves as your operational blueprint.</p>
+                <a href="#appendixG" class="btn btn-primary" onclick="navigateTo('appendixG')">Go to Implementation Memo (Appendix G)</a>
+            </div>
+
+            <h2>Level 1 Implementation Requirements (For All Systems)</h2>
+            <p>These baseline requirements apply to every AI system deployed in criminal justice settings.</p>
+
+            <div class="steps-container">
+                <div class="step-card">
+                    <div class="step-header">
+                        <h3>Human-Centered Design</h3>
+                    </div>
+                    <div class="step-content">
+                        <ul>
+                            <li>Design the user interface and workflow to present AI outputs as recommendations, not directives.</li>
+                            <li>Show operators the relevant information that informed each recommendation, giving them context to exercise independent judgment.</li>
+                            <li>Document every override decision along with the operator's rationale.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="step-card">
+                    <div class="step-header">
+                        <h3>Training and Capacity Building</h3>
+                    </div>
+                    <div class="step-content">
+                        <p>Before anyone operates the AI system, they need training that covers system functionality, limitations, known failure modes, and the common tendency to over-rely on automated suggestions known as automation-bias.</p>
+                        <ul>
+                            <li>Plan for regular refresher training, updates when the system changes, and sessions incorporating findings from ongoing monitoring.</li>
+                            <li>Keep detailed records of who has been trained, maintain current training materials, and evaluate training effectiveness.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="step-card">
+                    <div class="step-header">
+                        <h3>Creating Transparency and Accountability</h3>
+                    </div>
+                    <div class="step-content">
+                        <p>The public has a right to know when AI systems affect them. Develop clear public notification in plain language explaining what the system does, how it's used, and who is accountable for decisions involving it.</p>
+                        <ul>
+                            <li>Internally, designate specific officials who are publicly accountable for the system.</li>
+                            <li>Document decision-making processes and override rationales.</li>
+                            <li>Publish regular reports on system performance, including how often operators override the system and why.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="step-card">
+                    <div class="step-header">
+                        <h3>Protecting Privacy and Data Security</h3>
+                    </div>
+                    <div class="step-content">
+                        <p>Collect and process only what's necessary for the system's legitimate purpose. Regularly review these requirements to prevent unnecessary accumulation.</p>
+                        <ul>
+                            <li>Implement robust technical safeguards per your contract, including regular security assessments, strict access controls, and monitoring for unauthorized access.</li>
+                            <li>Establish and follow clear retention policies with automated deletion where appropriate.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="step-card">
+                    <div class="step-header">
+                        <h3>Pilot Program</h3>
+                    </div>
+                    <div class="step-content">
+                        <p>Before deploying at full-scale, test the system in your actual operational environment. Design a pilot with controlled scope and clear success criteria defined before you begin.</p>
+                        <ul>
+                            <li>During the pilot, systematically track your success metrics while remaining alert for unexpected behaviors.</li>
+                            <li>Rigorously evaluate results against your success criteria.</li>
+                            <li>Make a formal go/no-go decision. If the pilot reveals constitutional violations or unmitigable harms, you cannot proceed.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="step-card">
+                    <div class="step-header">
+                        <h3>Ongoing Monitoring and Oversight</h3>
+                    </div>
+                    <div class="step-content">
+                        <ul>
+                            <li>Continuously monitor system performance, watching for degradation over time.</li>
+                            <li>Pay special attention to demographic performance, investigating any differences that emerge.</li>
+                            <li>Establish clear procedures for identifying problems, addressing them quickly, and documenting issues and resolutions.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <h2>Level 2 Enhanced Requirements (For Substantial Risk Systems)</h2>
+            <p>Systems classified as substantial risk require everything in Level 1 plus these enhanced protections.</p>
+
+            <div class="steps-container">
+                <div class="step-card">
+                    <div class="step-header">
+                        <h3>Strengthening Rights Protection</h3>
+                    </div>
+                    <div class="step-content">
+                        <p>Conduct formal legal analysis reviewing due process implications, equal protection concerns, and surveillance or privacy impacts. Ensure individual rights remain fully preserved through clear procedures for people to:</p>
+                        <ul>
+                            <li>Challenge AI-influenced decisions</li>
+                            <li>Access meaningful information about how AI was used in their case</li>
+                            <li>Present additional or new information</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="step-card">
+                    <div class="step-header">
+                        <h3>Community Engagement</h3>
+                    </div>
+                    <div class="step-content">
+                        <ul>
+                            <li>Establish a Community Advisory Committee with representatives from affected communities.</li>
+                            <li>Maintain ongoing communication through regular public reports and accessible forums.</li>
+                            <li>Document how community concerns are addressed, incorporate feedback into improvements.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="step-card">
+                    <div class="step-header">
+                        <h3>Demanding Evidence and Validation</h3>
+                    </div>
+                    <div class="step-content">
+                        <ul>
+                            <li>Require independent validation by experts not affiliated with your vendor or agency.</li>
+                            <li>Conduct formal alternatives analysis examining non-AI approaches and documenting why AI is preferable despite its risks.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="step-card">
+                    <div class="step-header">
+                        <h3>Auditing and Enhanced Oversight</h3>
+                    </div>
+                    <div class="step-content">
+                        <ul>
+                            <li>Provide extended training on system limitations, automation bias resistance.</li>
+                            <li>Protect staff through clear whistleblower protections and formal channels for reporting concerns.</li>
+                            <li>Implement real-time demographic analysis that continuously monitors performance across groups.</li>
+                            <li>Maintain comprehensive documentation including detailed decision logs and complete audit trails.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="checklist-section">
+                <h3>Checklist Before Moving to Phase 5</h3>
+                <form id="phase4Checklist" class="checklist-form">
+                    <label class="checkbox-item"><input type="checkbox" name="p4check"> Pilot program successfully completed with positive results</label>
+                    <label class="checkbox-item"><input type="checkbox" name="p4check"> Formal decision made to proceed to full deployment</label>
+                    <label class="checkbox-item"><input type="checkbox" name="p4check"> All required training completed and documented</label>
+                    <label class="checkbox-item"><input type="checkbox" name="p4check"> Monitoring systems operational and producing data</label>
+                    <label class="checkbox-item"><input type="checkbox" name="p4check"> Public notification completed</label>
+                    <label class="checkbox-item"><input type="checkbox" name="p4check"> For Substantial Risk systems: Community Advisory Committee established</label>
+                    <label class="checkbox-item"><input type="checkbox" name="p4check"> For Substantial Risk systems: Independent oversight arranged</label>
+                    <label class="checkbox-item"><input type="checkbox" name="p4check"> System performing as expected without unmitigated concerns</label>
+                    <label class="checkbox-item"><input type="checkbox" name="p4check"> Documentation complete and filed</label>
+                </form>
+            </div>
+
+            <div class="nav-buttons">
+                <a href="#phase3" class="btn btn-secondary" onclick="navigateTo('phase3')">Back to Phase 3</a>
+                <a href="#phase5" class="btn btn-primary" onclick="navigateTo('phase5')">Continue to Phase 5</a>
+            </div>
+        </section>
+
+        <!-- PHASE 5 SECTION -->
+        <section id="phase5" class="section">
+            <div class="section-header">
+                <div class="phase-badge">Phase 5</div>
+                <h1>Ongoing Management and Reassessment</h1>
+            </div>
+
+            <div class="intro-card">
+                <p>Deployment is not the end of the process. All systems require ongoing monitoring and periodic reassessment to ensure they continue to function as intended without causing harm.</p>
+            </div>
+
+            <div class="requirement-box">
+                <h4>Scheduled Reassessment</h4>
+                <p>Substantial Risk systems must be fully reassessed <strong>annually</strong>.</p>
+            </div>
+
+            <div class="requirement-box highlight">
+                <h4>Triggered Reassessment</h4>
+                <p>A new, full assessment must be conducted immediately if:</p>
+                <ul>
+                    <li><strong>System Changes:</strong> An update changes the system's core functionality, learning processes, or decision logic.</li>
+                    <li><strong>Scope Expansion:</strong> The system is applied to new use cases or new populations.</li>
+                    <li><strong>Performance Issues:</strong> There is evidence of unexpected behaviors, systematic errors, or performance degradation.</li>
+                    <li><strong>Rights Concerns:</strong> Bias, disparate impacts, or constitutional compliance issues are identified.</li>
+                    <li><strong>Environmental Changes:</strong> Relevant laws, policies, or the human rights environment shift.</li>
+                </ul>
+            </div>
+
+            <div class="info-box danger">
+                <h3>Risk Escalation Protocol</h3>
+                <p><strong>If Reclassified to a Higher Risk Level:</strong> You must immediately implement all requirements for the new, higher level. There is no grace period for compliance.</p>
+                <p><strong>If Reclassified as Prohibited:</strong> Cease operations of the system immediately. Follow the protocol in Appendix B.</p>
+            </div>
+
+            <div class="action-card">
+                <h4>Ongoing Monitoring Protocols</h4>
+                <p>See Appendix H for detailed protocols on ongoing monitoring and assessment.</p>
+                <a href="#appendixH" class="btn btn-primary" onclick="navigateTo('appendixH')">Go to Monitoring Protocols (Appendix H)</a>
+            </div>
+
+            <div class="nav-buttons">
+                <a href="#phase4" class="btn btn-secondary" onclick="navigateTo('phase4')">Back to Phase 4</a>
+                <a href="#appendixA" class="btn btn-primary" onclick="navigateTo('appendixA')">View Appendices</a>
+            </div>
+        </section>
+
+        <!-- APPENDIX A -->
+        <section id="appendixA" class="section">
+            <div class="section-header">
+                <div class="phase-badge">Appendix A</div>
+                <h1>AI Readiness Assessment</h1>
+            </div>
+
+            <div class="intro-card">
+                <p>Use this worksheet to evaluate your organization's foundational capacity before beginning an assessment of a specific AI tool.</p>
+            </div>
+
+            <form id="readinessForm" class="assessment-form">
+                <div class="form-section">
+                    <h3>1. Data Governance</h3>
+                    <div class="form-group">
+                        <label>Do we have clear, enforced policies for data quality, collection, storage, and sharing?</label>
+                        <select name="data1">
+                            <option value="">Select Assessment</option>
+                            <option value="low">Low Readiness</option>
+                            <option value="medium">Medium Readiness</option>
+                            <option value="high">High Readiness</option>
+                        </select>
+                        <textarea placeholder="Notes / Action Items"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label>Is our data accurate, complete, and relevant for the intended AI application?</label>
+                        <select name="data2">
+                            <option value="">Select Assessment</option>
+                            <option value="low">Low Readiness</option>
+                            <option value="medium">Medium Readiness</option>
+                            <option value="high">High Readiness</option>
+                        </select>
+                        <textarea placeholder="Notes / Action Items"></textarea>
+                    </div>
+                </div>
+
+                <div class="form-section">
+                    <h3>2. Technical Capacity</h3>
+                    <div class="form-group">
+                        <label>Do we have staff with the technical expertise to evaluate, implement, and monitor an AI system?</label>
+                        <select name="tech1">
+                            <option value="">Select Assessment</option>
+                            <option value="low">Low Readiness</option>
+                            <option value="medium">Medium Readiness</option>
+                            <option value="high">High Readiness</option>
+                        </select>
+                        <textarea placeholder="Notes / Action Items"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label>Is our IT infrastructure sufficient to support the proposed AI system securely?</label>
+                        <select name="tech2">
+                            <option value="">Select Assessment</option>
+                            <option value="low">Low Readiness</option>
+                            <option value="medium">Medium Readiness</option>
+                            <option value="high">High Readiness</option>
+                        </select>
+                        <textarea placeholder="Notes / Action Items"></textarea>
+                    </div>
+                </div>
+
+                <div class="form-section">
+                    <h3>3. Legal & Policy</h3>
+                    <div class="form-group">
+                        <label>Do we have an internal policy or legal framework governing AI use?</label>
+                        <select name="legal1">
+                            <option value="">Select Assessment</option>
+                            <option value="low">Low Readiness</option>
+                            <option value="medium">Medium Readiness</option>
+                            <option value="high">High Readiness</option>
+                        </select>
+                        <textarea placeholder="Notes / Action Items"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label>Have we consulted legal counsel on the constitutional and statutory implications of using AI?</label>
+                        <select name="legal2">
+                            <option value="">Select Assessment</option>
+                            <option value="low">Low Readiness</option>
+                            <option value="medium">Medium Readiness</option>
+                            <option value="high">High Readiness</option>
+                        </select>
+                        <textarea placeholder="Notes / Action Items"></textarea>
+                    </div>
+                </div>
+
+                <div class="form-section">
+                    <h3>4. Organizational Culture</h3>
+                    <div class="form-group">
+                        <label>Is there leadership buy-in for responsible AI adoption?</label>
+                        <select name="org1">
+                            <option value="">Select Assessment</option>
+                            <option value="low">Low Readiness</option>
+                            <option value="medium">Medium Readiness</option>
+                            <option value="high">High Readiness</option>
+                        </select>
+                        <textarea placeholder="Notes / Action Items"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label>Have we trained relevant staff on AI literacy and critical thinking?</label>
+                        <select name="org2">
+                            <option value="">Select Assessment</option>
+                            <option value="low">Low Readiness</option>
+                            <option value="medium">Medium Readiness</option>
+                            <option value="high">High Readiness</option>
+                        </select>
+                        <textarea placeholder="Notes / Action Items"></textarea>
+                    </div>
+                </div>
+
+                <div class="form-section">
+                    <h3>5. Community Engagement</h3>
+                    <div class="form-group">
+                        <label>Do we have established channels for engaging with the community on these issues?</label>
+                        <select name="comm1">
+                            <option value="">Select Assessment</option>
+                            <option value="low">Low Readiness</option>
+                            <option value="medium">Medium Readiness</option>
+                            <option value="high">High Readiness</option>
+                        </select>
+                        <textarea placeholder="Notes / Action Items"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label>Is there a foundation of trust with the communities we serve that would support AI adoption?</label>
+                        <select name="comm2">
+                            <option value="">Select Assessment</option>
+                            <option value="low">Low Readiness</option>
+                            <option value="medium">Medium Readiness</option>
+                            <option value="high">High Readiness</option>
+                        </select>
+                        <textarea placeholder="Notes / Action Items"></textarea>
+                    </div>
+                </div>
+
+                <div class="form-section">
+                    <h3>6. Cumulative Review</h3>
+                    <div class="form-group">
+                        <label>After using this worksheet, assess your overall readiness to adopt the tool under consideration:</label>
+                        <select name="overall">
+                            <option value="">Select Assessment</option>
+                            <option value="low">Low Readiness - Address gaps before proceeding</option>
+                            <option value="medium">Medium Readiness - Some gaps to address</option>
+                            <option value="high">High Readiness - Prepared to proceed</option>
+                        </select>
+                        <textarea placeholder="Summary notes"></textarea>
+                    </div>
+                </div>
+
+                <div class="form-actions">
+                    <button type="button" class="btn btn-secondary" onclick="saveFormData('readinessForm')">Save Progress</button>
+                    <button type="button" class="btn btn-primary" onclick="window.print()">Print Form</button>
+                </div>
+            </form>
+
+            <div class="nav-buttons">
+                <a href="#phase1" class="btn btn-secondary" onclick="navigateTo('phase1')">Back to Phase 1</a>
+                <a href="#appendixB" class="btn btn-primary" onclick="navigateTo('appendixB')">Next Appendix</a>
+            </div>
+        </section>
+
+        <!-- APPENDIX B -->
+        <section id="appendixB" class="section">
+            <div class="section-header">
+                <div class="phase-badge">Appendix B</div>
+                <h1>Protocol for Prohibited Systems</h1>
+            </div>
+
+            <div class="intro-card danger">
+                <p>If your screening has identified a PROHIBITED system, follow this protocol immediately.</p>
+            </div>
+
+            <div class="steps-container">
+                <div class="step-card">
+                    <div class="step-header">
+                        <span class="step-number">1</span>
+                        <h3>DO NOT PROCURE OR IMPLEMENT</h3>
+                    </div>
+                    <div class="step-content">
+                        <p><strong>Halt any procurement process immediately.</strong></p>
+                    </div>
+                </div>
+
+                <div class="step-card">
+                    <div class="step-header">
+                        <span class="step-number">2</span>
+                        <h3>DOCUMENT THE PROHIBITION</h3>
+                    </div>
+                    <div class="step-content">
+                        <ul>
+                            <li>Complete the Classification Memo.</li>
+                            <li>Clearly state which prohibited indicators applied.</li>
+                            <li>Explain why the violations could not be mitigated.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="step-card">
+                    <div class="step-header">
+                        <span class="step-number">3</span>
+                        <h3>EXPLORE ALTERNATIVE SOLUTIONS</h3>
+                    </div>
+                    <div class="step-content">
+                        <ul>
+                            <li>Revisit the original problem the AI was intended to solve.</li>
+                            <li>Explore alternative approaches and non-AI solutions that respect constitutional boundaries.</li>
+                            <li>Consult stakeholders to develop preferable alternatives.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="step-card">
+                    <div class="step-header">
+                        <span class="step-number">4</span>
+                        <h3>ORGANIZATIONAL LEARNING</h3>
+                    </div>
+                    <div class="step-content">
+                        <ul>
+                            <li>Share lessons learned with the organization to prevent future prohibited proposals.</li>
+                            <li>Share information about the prohibited application with peers in your sector.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="nav-buttons">
+                <a href="#appendixA" class="btn btn-secondary" onclick="navigateTo('appendixA')">Previous Appendix</a>
+                <a href="#appendixC" class="btn btn-primary" onclick="navigateTo('appendixC')">Next Appendix</a>
+            </div>
+        </section>
+
+        <!-- APPENDIX C -->
+        <section id="appendixC" class="section">
+            <div class="section-header">
+                <div class="phase-badge">Appendix C</div>
+                <h1>System Complexity and Interpretability Assessment</h1>
+            </div>
+
+            <div class="intro-card">
+                <p>AI systems vary in their complexity, transparency, and the difficulty of validating their behavior and impact. These characteristics help determine how much scrutiny, testing, and monitoring are needed.</p>
+            </div>
+
+            <h2>Key Dimensions to Assess</h2>
+
+            <div class="dimension-card">
+                <h3>1. Decision Transparency</h3>
+                <div class="dimension-content">
+                    <div class="dimension-item">
+                        <strong>More Transparent:</strong> The system follows clear, documented rules or formulas that can be traced step-by-step. Operators can explain exactly why the system produced a specific output.
+                    </div>
+                    <div class="dimension-item">
+                        <strong>Less Transparent:</strong> The system uses methods that are opaque or difficult to understand. The exact reasoning path may be unknown or not intuitive to human operators.
+                    </div>
+                </div>
+            </div>
+
+            <div class="dimension-card">
+                <h3>2. Predictability and Consistency</h3>
+                <div class="dimension-content">
+                    <div class="dimension-item">
+                        <strong>More Predictable:</strong> Given the same inputs, the system will always produce the same output. Its behavior is stable and well-understood.
+                    </div>
+                    <div class="dimension-item">
+                        <strong>Less Predictable:</strong> The system may produce novel or unexpected results. It might learn and adapt over time or exhibit behaviors that surprise operators.
+                    </div>
+                </div>
+            </div>
+
+            <div class="dimension-card">
+                <h3>3. Validation Difficulty</h3>
+                <div class="dimension-content">
+                    <div class="dimension-item">
+                        <strong>Easier to Validate:</strong> The system's performance can be tested straightforwardly. Errors are easy to identify, and the system's accuracy can be verified through standard quality assurance processes.
+                    </div>
+                    <div class="dimension-item">
+                        <strong>Harder to Validate:</strong> The system's behavior is difficult to test comprehensively. It may process complex, ambiguous inputs where "correct" outputs are subjective or context-dependent.
+                    </div>
+                </div>
+            </div>
+
+            <div class="dimension-card">
+                <h3>4. Adaptability</h3>
+                <div class="dimension-content">
+                    <div class="dimension-item">
+                        <strong>Static Systems:</strong> The system's logic only changes when humans manually reprogram it. Its rules are fixed.
+                    </div>
+                    <div class="dimension-item">
+                        <strong>Adaptive Systems:</strong> The system may learn from new data and change its behavior over time. This adaptability creates uncertainty about future performance.
+                    </div>
+                </div>
+            </div>
+
+            <h2>Assessment Questions</h2>
+            <form id="complexityForm" class="assessment-form">
+                <div class="form-group">
+                    <label>1. Can you trace and explain each step of how the system reaches its outputs?</label>
+                    <div class="radio-group">
+                        <label><input type="radio" name="cq1" value="yes"> Yes, completely</label>
+                        <label><input type="radio" name="cq1" value="partial"> Partially</label>
+                        <label><input type="radio" name="cq1" value="no"> No or very difficult</label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>2. Does the system always produce the same output for the same input?</label>
+                    <div class="radio-group">
+                        <label><input type="radio" name="cq2" value="yes"> Yes, completely</label>
+                        <label><input type="radio" name="cq2" value="partial"> Partially</label>
+                        <label><input type="radio" name="cq2" value="no"> No or very difficult</label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>3. Can the system process ambiguous or unstructured data (images, free text, audio)?</label>
+                    <div class="radio-group">
+                        <label><input type="radio" name="cq3" value="no"> No</label>
+                        <label><input type="radio" name="cq3" value="partial"> Partially</label>
+                        <label><input type="radio" name="cq3" value="yes"> Yes</label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>4. How confident are you that you can fully validate the system's performance before deployment?</label>
+                    <div class="radio-group">
+                        <label><input type="radio" name="cq4" value="yes"> Very confident</label>
+                        <label><input type="radio" name="cq4" value="partial"> Somewhat confident</label>
+                        <label><input type="radio" name="cq4" value="no"> Not confident</label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>5. Could the system develop unexpected behaviors or strategies not explicitly programmed?</label>
+                    <div class="radio-group">
+                        <label><input type="radio" name="cq5" value="no"> No</label>
+                        <label><input type="radio" name="cq5" value="partial"> Possibly</label>
+                        <label><input type="radio" name="cq5" value="yes"> Yes</label>
+                    </div>
+                </div>
+
+                <div id="complexityResult" class="result-box"></div>
+            </form>
+
+            <div class="info-box">
+                <h3>How to Use This Assessment</h3>
+                <p><strong>Systems with lower complexity</strong> (transparent, predictable, easy to validate, static) require standard oversight approaches.</p>
+                <p><strong>Systems with higher complexity</strong> (opaque, ambiguous, hard to validate, processing unstructured data) require enhanced oversight including explainability capabilities, continuous monitoring, and independent technical validation.</p>
+            </div>
+
+            <div class="nav-buttons">
+                <a href="#appendixB" class="btn btn-secondary" onclick="navigateTo('appendixB')">Previous Appendix</a>
+                <a href="#appendixD" class="btn btn-primary" onclick="navigateTo('appendixD')">Next Appendix</a>
+            </div>
+        </section>
+
+        <!-- APPENDIX D -->
+        <section id="appendixD" class="section">
+            <div class="section-header">
+                <div class="phase-badge">Appendix D</div>
+                <h1>Sector Context Guidance</h1>
+            </div>
+
+            <div class="intro-card">
+                <p>Review this guidance for your specific sector. The key question is <strong>marginal change</strong>: how does the AI system change risk and opportunity compared to current practices?</p>
+            </div>
+
+            <div class="sector-tabs">
+                <button class="sector-tab active" onclick="showSector('lawEnforcement')">Law Enforcement</button>
+                <button class="sector-tab" onclick="showSector('courts')">Courts</button>
+                <button class="sector-tab" onclick="showSector('corrections')">Corrections</button>
+                <button class="sector-tab" onclick="showSector('community')">Community Organizations</button>
+            </div>
+
+            <div id="lawEnforcement" class="sector-content active">
+                <h3>Law Enforcement</h3>
+                <div class="sector-section">
+                    <h4>Risk Assessment</h4>
+                    <p><strong>AI may increase risk when it:</strong></p>
+                    <ul>
+                        <li>Enables new scope of surveillance, monitoring, or data aggregation impossible previously</li>
+                        <li>Influences stops, searches, or arrests with less review than current practice</li>
+                        <li>Aggregates data creating new investigative powers unavailable currently</li>
+                        <li>Lacks safeguards present in current processes</li>
+                    </ul>
+                    <p><strong>AI may maintain or reduce risk when it:</strong></p>
+                    <ul>
+                        <li>Replaces more biased current decision-making with objective criteria</li>
+                        <li>Adds accountability and transparency to current practices</li>
+                        <li>Operates in administrative functions not affecting current constitutional practices</li>
+                        <li>Includes safeguards stronger than current practice</li>
+                        <li>Received community support as improvement over current practices</li>
+                    </ul>
+                </div>
+                <div class="sector-section">
+                    <h4>Opportunity Assessment</h4>
+                    <p><strong>High opportunity requires demonstrating improvement over current practice:</strong></p>
+                    <ul>
+                        <li>Independent evidence that AI performs better than current methods</li>
+                        <li>Reduction in disparate impacts compared to current practice</li>
+                        <li>Improved outcomes beyond current baseline</li>
+                        <li>Community validation that it addresses real problems with current practices</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div id="courts" class="sector-content">
+                <h3>Courts</h3>
+                <div class="sector-section">
+                    <h4>Risk Assessment</h4>
+                    <p><strong>AI may increase risk when it:</strong></p>
+                    <ul>
+                        <li>Reduces transparency compared to current judicial reasoning</li>
+                        <li>Generates recommendations where judges currently exercise fuller discretion</li>
+                        <li>Creates information asymmetries beyond those in current practice</li>
+                        <li>Is less contestable by defense than current processes</li>
+                        <li>Meets lower scientific standards than current requirements</li>
+                    </ul>
+                    <p><strong>AI may maintain or reduce risk when it:</strong></p>
+                    <ul>
+                        <li>Makes current implicit biases explicit and measurable</li>
+                        <li>Provides information improving on current data</li>
+                        <li>Improves current adversarial balance</li>
+                        <li>Handles purely administrative functions without affecting adjudication processes</li>
+                        <li>Reduces unwarranted disparities in current practices through better information</li>
+                    </ul>
+                </div>
+                <div class="sector-section">
+                    <h4>Opportunity Assessment</h4>
+                    <p><strong>High opportunity requires demonstrating improvement over current practice:</strong></p>
+                    <ul>
+                        <li>Evidence of better decision quality or efficiency</li>
+                        <li>Reduction in unwarranted disparities</li>
+                        <li>Enhancement of individualized consideration currently lacking</li>
+                        <li>Preserved or improved due process compared to current procedures</li>
+                        <li>Validation across demographic groups showing improvement over current baseline outcomes</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div id="corrections" class="sector-content">
+                <h3>Corrections</h3>
+                <div class="sector-section">
+                    <h4>Risk Assessment</h4>
+                    <p><strong>AI may increase risk when it:</strong></p>
+                    <ul>
+                        <li>Reduces transparency or contestability compared to current classification processes</li>
+                        <li>Restricts programming access beyond current limitations</li>
+                        <li>Impacts family connections with fewer exceptions than current policy</li>
+                        <li>Reduces rehabilitation focus below current practice standards</li>
+                    </ul>
+                    <p><strong>AI may maintain or reduce risk when it:</strong></p>
+                    <ul>
+                        <li>Makes current classifications more auditable</li>
+                        <li>Identifies service needs better than current informal processes</li>
+                        <li>Improves program matching beyond current assignments</li>
+                        <li>Operates in administrative functions not affecting current individual experiences</li>
+                        <li>Enhances family connections beyond current restrictive practices</li>
+                        <li>Includes stronger protections than current practice for vulnerable populations</li>
+                    </ul>
+                </div>
+                <div class="sector-section">
+                    <h4>Opportunity Assessment</h4>
+                    <p><strong>High opportunity requires demonstrating improvement over current practice:</strong></p>
+                    <ul>
+                        <li>Evidence of better reentry outcomes than current baseline recidivism</li>
+                        <li>Improved program matching compared to current assignment processes</li>
+                        <li>Enhanced identification of service needs currently missed</li>
+                        <li>Demonstrated benefits for incarcerated individuals beyond current programming</li>
+                        <li>Significant, demonstrable efficiency gains</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div id="community" class="sector-content">
+                <h3>Community Organizations</h3>
+                <div class="sector-section">
+                    <h4>Risk Assessment</h4>
+                    <p><strong>AI may increase risk when it:</strong></p>
+                    <ul>
+                        <li>Introduces monitoring beyond current trust-based relationships</li>
+                        <li>Creates service access barriers not present in current practice</li>
+                        <li>Shares data with justice agencies beyond current sharing</li>
+                        <li>Reduces human interaction</li>
+                        <li>Makes participation less voluntary than current processes</li>
+                        <li>Serves vulnerable populations with fewer protections than current practice</li>
+                        <li>Damages trust or advocacy reputation more than current practices</li>
+                        <li>Represents funder-driven mission drift from current community-driven approach</li>
+                    </ul>
+                    <p><strong>AI may maintain or reduce risk when it:</strong></p>
+                    <ul>
+                        <li>Improves service matching beyond current processes</li>
+                        <li>Identifies needs currently missed in programs</li>
+                        <li>Reduces bias in current service decisions</li>
+                        <li>Enhances rather than replaces current relationships</li>
+                        <li>Maintains or exceeds current privacy protections</li>
+                        <li>Increases transparency beyond current processes</li>
+                        <li>Increases individual agency and choice compared to current options</li>
+                        <li>Better supports both service and advocacy missions than current approach</li>
+                    </ul>
+                </div>
+                <div class="sector-section">
+                    <h4>Opportunity Assessment</h4>
+                    <p><strong>High opportunity requires demonstrating improvement over current practice:</strong></p>
+                    <ul>
+                        <li>Evidence of better individual outcomes than current service delivery baseline</li>
+                        <li>Increased access to services compared to current capacity</li>
+                        <li>Validation from participants that it addresses real gaps in current practice</li>
+                        <li>Confirmation it enhances rather than replaces current relationship-building</li>
+                        <li>Evidence it strengthens rather than compromises current advocacy effectiveness</li>
+                        <li>Demonstration it responds to community-identified needs not adequately met by current practice</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="info-box">
+                <h3>How to Apply This Guidance</h3>
+                <ol>
+                    <li><strong>Identify your current practice baseline:</strong> What happens now without AI? How are decisions currently made?</li>
+                    <li><strong>Assess marginal change:</strong> How specifically will AI change current practice? What risks does it add, maintain, or reduce?</li>
+                    <li><strong>Document your reasoning</strong> in the Classification Memo explaining which sector factors influenced your final classification.</li>
+                </ol>
+            </div>
+
+            <div class="nav-buttons">
+                <a href="#appendixC" class="btn btn-secondary" onclick="navigateTo('appendixC')">Previous Appendix</a>
+                <a href="#appendixE" class="btn btn-primary" onclick="navigateTo('appendixE')">Next Appendix</a>
+            </div>
+        </section>
+
+        <!-- APPENDIX E - Classification Memo -->
+        <section id="appendixE" class="section">
+            <div class="section-header">
+                <div class="phase-badge">Appendix E</div>
+                <h1>Classification Memorandum Template</h1>
+            </div>
+
+            <form id="classificationMemo" class="memo-form">
+                <div class="memo-header">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>TO:</label>
+                            <input type="text" name="to" placeholder="Recipient Name/Department">
+                        </div>
+                        <div class="form-group">
+                            <label>FROM:</label>
+                            <input type="text" name="from" placeholder="Assessment Team Lead Name/Title">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>DATE:</label>
+                            <input type="date" name="date">
+                        </div>
+                        <div class="form-group">
+                            <label>RE:</label>
+                            <input type="text" name="re" placeholder="AI System Classification Assessment - [System Name]">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-section">
+                    <h3>System Information</h3>
+                    <div class="form-group">
+                        <label>System Name:</label>
+                        <input type="text" name="systemName">
+                    </div>
+                    <div class="form-group">
+                        <label>Vendor/Developer:</label>
+                        <input type="text" name="vendor">
+                    </div>
+                    <div class="form-group">
+                        <label>Assessment Team Lead:</label>
+                        <input type="text" name="teamLead">
+                    </div>
+                    <div class="form-group">
+                        <label>Assessment Team Members:</label>
+                        <textarea name="teamMembers" placeholder="List all team members"></textarea>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Assessment Period Start:</label>
+                            <input type="date" name="periodStart">
+                        </div>
+                        <div class="form-group">
+                            <label>Assessment Period End:</label>
+                            <input type="date" name="periodEnd">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-section">
+                    <h3>Classification Results</h3>
+                    <div class="form-group">
+                        <label>Risk Level:</label>
+                        <div class="radio-group">
+                            <label><input type="radio" name="riskLevel" value="low"> Low</label>
+                            <label><input type="radio" name="riskLevel" value="substantial"> Substantial</label>
+                            <label><input type="radio" name="riskLevel" value="prohibited"> Prohibited</label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Opportunity Level:</label>
+                        <div class="radio-group">
+                            <label><input type="radio" name="oppLevel" value="high"> High</label>
+                            <label><input type="radio" name="oppLevel" value="medium"> Medium</label>
+                            <label><input type="radio" name="oppLevel" value="low"> Low</label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Implementation Level:</label>
+                        <div class="radio-group">
+                            <label><input type="radio" name="implLevel" value="level1"> Level 1</label>
+                            <label><input type="radio" name="implLevel" value="level2"> Level 2</label>
+                            <label><input type="radio" name="implLevel" value="level3"> Level 3 (Do Not Implement)</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-section">
+                    <h3>Assessment Rationale</h3>
+                    <div class="form-group">
+                        <label>Risk Analysis:</label>
+                        <textarea name="riskAnalysis" rows="6" placeholder="Provide detailed explanation of risk factors identified, including: data privacy concerns, potential for bias or discrimination, transparency/explainability issues, security vulnerabilities, and alignment with organizational values and legal requirements."></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label>Opportunity Analysis:</label>
+                        <textarea name="oppAnalysis" rows="6" placeholder="Describe the potential benefits and opportunities this system presents, including: efficiency gains, improved service delivery, cost savings, enhanced decision-making capabilities, and alignment with strategic objectives. Quantify benefits where possible."></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label>Key Findings:</label>
+                        <textarea name="keyFindings" rows="4" placeholder="Summarize the most critical factors that drove the classification decision, including any concerns, limitations, or conditions that should be considered."></textarea>
+                    </div>
+                </div>
+
+                <div class="form-section">
+                    <h3>Recommendation</h3>
+                    <div class="form-group">
+                        <label>Recommended Action:</label>
+                        <div class="radio-group">
+                            <label><input type="radio" name="action" value="approve"> Approve for Implementation</label>
+                            <label><input type="radio" name="action" value="conditions"> Approve with Conditions</label>
+                            <label><input type="radio" name="action" value="reject"> Reject</label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Implementation Recommendation Details:</label>
+                        <textarea name="implDetails" rows="6" placeholder="Provide specific recommendations for next steps, including any conditions, safeguards, or modifications required before implementation. If rejection is recommended, explain rationale and potential alternatives."></textarea>
+                    </div>
+                </div>
+
+                <div class="form-section">
+                    <h3>Additional Considerations</h3>
+                    <div class="form-group">
+                        <label>Stakeholder Input:</label>
+                        <textarea name="stakeholderInput" rows="4" placeholder="Document any stakeholder consultations, community feedback, or subject matter expert input that informed this assessment."></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label>Compliance and Policy Alignment:</label>
+                        <textarea name="compliance" rows="4" placeholder="Note relevant laws, regulations, policies, or ethical frameworks considered in this assessment."></textarea>
+                    </div>
+                </div>
+
+                <div class="form-section signature-section">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Assessment Team Lead Signature:</label>
+                            <input type="text" name="leadSignature">
+                            <label>Date:</label>
+                            <input type="date" name="leadDate">
+                        </div>
+                        <div class="form-group">
+                            <label>Reviewer/Approver Signature:</label>
+                            <input type="text" name="approverSignature">
+                            <label>Date:</label>
+                            <input type="date" name="approverDate">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-actions">
+                    <button type="button" class="btn btn-secondary" onclick="saveFormData('classificationMemo')">Save Progress</button>
+                    <button type="button" class="btn btn-primary" onclick="window.print()">Print Memo</button>
+                </div>
+            </form>
+
+            <div class="nav-buttons">
+                <a href="#appendixD" class="btn btn-secondary" onclick="navigateTo('appendixD')">Previous Appendix</a>
+                <a href="#appendixF" class="btn btn-primary" onclick="navigateTo('appendixF')">Next Appendix</a>
+            </div>
+        </section>
+
+        <!-- APPENDIX F - Procurement Guide -->
+        <section id="appendixF" class="section">
+            <div class="section-header">
+                <div class="phase-badge">Appendix F</div>
+                <h1>Procurement Guide</h1>
+            </div>
+
+            <div class="intro-card">
+                <p>Ensure that the procurement process and contract requirements meets the standard best practices, including these expectations to ensure performance and accountability and to protect rights.</p>
+            </div>
+
+            <h2>Core Contract Components for All Systems</h2>
+            <form id="procurementChecklist" class="checklist-form">
+                <div class="checklist-category">
+                    <h3>System Requirements and Specifications</h3>
+                    <label class="checkbox-item"><input type="checkbox"> Clearly define the problem the system should address</label>
+                    <label class="checkbox-item"><input type="checkbox"> Define integration requirements with existing systems</label>
+                </div>
+
+                <div class="checklist-category">
+                    <h3>Performance Standards and Metrics</h3>
+                    <label class="checkbox-item"><input type="checkbox"> Require vendors to propose metrics for evaluating success</label>
+                    <label class="checkbox-item"><input type="checkbox"> Require demographic performance data (performance across different demographic groups)</label>
+                    <label class="checkbox-item"><input type="checkbox"> Specify accuracy, reliability, and consistency requirements</label>
+                </div>
+
+                <div class="checklist-category">
+                    <h3>Evidence and Validation Requirements</h3>
+                    <label class="checkbox-item"><input type="checkbox"> Require documentation of system testing and validation</label>
+                    <label class="checkbox-item"><input type="checkbox"> Require disclosure of any known limitations or failure modes</label>
+                    <label class="checkbox-item"><input type="checkbox"> Request case studies or references from criminal justice implementations</label>
+                </div>
+
+                <div class="checklist-category">
+                    <h3>Transparency and Explainability</h3>
+                    <label class="checkbox-item"><input type="checkbox"> Require documentation of how the system works</label>
+                    <label class="checkbox-item"><input type="checkbox"> Demand plain-language explanations suitable for non-technical stakeholders</label>
+                    <label class="checkbox-item"><input type="checkbox"> For complex systems, require capability to generate case-specific explanations</label>
+                    <label class="checkbox-item"><input type="checkbox"> Specify access rights for auditors and oversight personnel</label>
+                </div>
+
+                <div class="checklist-category">
+                    <h3>Data Governance and Privacy</h3>
+                    <label class="checkbox-item"><input type="checkbox"> Define what data the system will access and process</label>
+                    <label class="checkbox-item"><input type="checkbox"> Establish data ownership clearly (agency retains ownership)</label>
+                    <label class="checkbox-item"><input type="checkbox"> Specify data retention and deletion policies</label>
+                    <label class="checkbox-item"><input type="checkbox"> Establish security and encryption standards</label>
+                    <label class="checkbox-item"><input type="checkbox"> Require compliance with relevant privacy laws and regulations</label>
+                    <label class="checkbox-item"><input type="checkbox"> Define data breach notification protocols</label>
+                </div>
+
+                <div class="checklist-category">
+                    <h3>Bias Testing and Fairness</h3>
+                    <label class="checkbox-item"><input type="checkbox"> Require evidence of bias testing across demographic groups</label>
+                    <label class="checkbox-item"><input type="checkbox"> Specify fairness metrics relevant to your context</label>
+                    <label class="checkbox-item"><input type="checkbox"> Require disclosure of any known bias issues and mitigation strategies</label>
+                </div>
+
+                <div class="checklist-category">
+                    <h3>Human Oversight and Override</h3>
+                    <label class="checkbox-item"><input type="checkbox"> Specify that human operators must be able to override system recommendations</label>
+                    <label class="checkbox-item"><input type="checkbox"> Require documentation of how human oversight will be facilitated</label>
+                </div>
+
+                <div class="checklist-category">
+                    <h3>Training and Support</h3>
+                    <label class="checkbox-item"><input type="checkbox"> Specify vendor responsibilities for initial training</label>
+                    <label class="checkbox-item"><input type="checkbox"> Require ongoing training resources and updates</label>
+                    <label class="checkbox-item"><input type="checkbox"> Establish technical support requirements and response times</label>
+                </div>
+
+                <div class="checklist-category">
+                    <h3>System Changes and Updates</h3>
+                    <label class="checkbox-item"><input type="checkbox"> Notification requirements for any system changes</label>
+                    <label class="checkbox-item"><input type="checkbox"> Re-validation requirements after updates</label>
+                    <label class="checkbox-item"><input type="checkbox"> Right to refuse updates that change risk profile</label>
+                </div>
+
+                <div class="checklist-category">
+                    <h3>Liability and Indemnification</h3>
+                    <label class="checkbox-item"><input type="checkbox"> The vendor must accept liability for system errors or failures</label>
+                    <label class="checkbox-item"><input type="checkbox"> Contract includes clause requiring vendor to indemnify agency for civil rights violations caused by system</label>
+                </div>
+
+                <div class="checklist-category">
+                    <h3>Termination</h3>
+                    <label class="checkbox-item"><input type="checkbox"> Contract allows agency to terminate for convenience</label>
+                    <label class="checkbox-item"><input type="checkbox"> Contract allows termination for performance failure</label>
+                    <label class="checkbox-item"><input type="checkbox"> Contract allows termination for rights concerns</label>
+                </div>
+            </form>
+
+            <h2>Additional Contract Requirements for Substantial Risk Systems</h2>
+            <form id="substantialRiskChecklist" class="checklist-form">
+                <div class="checklist-category">
+                    <h3>Enhanced Validation and Testing</h3>
+                    <label class="checkbox-item"><input type="checkbox"> Require independent validation of performance claims</label>
+                    <label class="checkbox-item"><input type="checkbox"> Specify pilot program requirements and success criteria</label>
+                </div>
+
+                <div class="checklist-category">
+                    <h3>Enhanced Rights Protections</h3>
+                    <label class="checkbox-item"><input type="checkbox"> Require legal review of system impacts on due process and equal protection</label>
+                    <label class="checkbox-item"><input type="checkbox"> Specify how individuals' rights to challenge decisions will be preserved</label>
+                </div>
+
+                <div class="checklist-category">
+                    <h3>Community Engagement Support</h3>
+                    <label class="checkbox-item"><input type="checkbox"> Require vendor participation in community meetings and explanations</label>
+                    <label class="checkbox-item"><input type="checkbox"> Specify vendor obligations to address community concerns</label>
+                </div>
+
+                <div class="checklist-category">
+                    <h3>Enhanced Auditability</h3>
+                    <label class="checkbox-item"><input type="checkbox"> Require algorithm transparency (with appropriate IP protections)</label>
+                    <label class="checkbox-item"><input type="checkbox"> Establish audit rights for independent experts</label>
+                </div>
+            </form>
+
+            <div class="nav-buttons">
+                <a href="#appendixE" class="btn btn-secondary" onclick="navigateTo('appendixE')">Previous Appendix</a>
+                <a href="#appendixG" class="btn btn-primary" onclick="navigateTo('appendixG')">Next Appendix</a>
+            </div>
+        </section>
+
+        <!-- APPENDIX G - Implementation Memo -->
+        <section id="appendixG" class="section">
+            <div class="section-header">
+                <div class="phase-badge">Appendix G</div>
+                <h1>Implementation Planning and Memorandum Template</h1>
+            </div>
+
+            <div class="intro-card">
+                <p>Complete the following template to ensure that system implementation aligns with the expectations established by this framework and responsibilities are assigned for the process.</p>
+            </div>
+
+            <form id="implementationMemo" class="memo-form">
+                <div class="memo-header">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>TO:</label>
+                            <input type="text" name="to" placeholder="Recipient Name/Department">
+                        </div>
+                        <div class="form-group">
+                            <label>FROM:</label>
+                            <input type="text" name="from" placeholder="Implementation Lead Name/Title">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>DATE:</label>
+                            <input type="date" name="date">
+                        </div>
+                        <div class="form-group">
+                            <label>RE:</label>
+                            <input type="text" name="re" placeholder="AI System Implementation Plan - [System Name]">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-section">
+                    <h3>System Overview</h3>
+                    <div class="form-group">
+                        <label>System Name:</label>
+                        <input type="text" name="systemName">
+                    </div>
+                    <div class="form-group">
+                        <label>Vendor/Developer:</label>
+                        <input type="text" name="vendor">
+                    </div>
+                    <div class="form-group">
+                        <label>Risk Level:</label>
+                        <select name="riskLevel">
+                            <option value="">Select</option>
+                            <option value="low">Low</option>
+                            <option value="substantial">Substantial</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Opportunity Level:</label>
+                        <input type="text" name="oppLevel">
+                    </div>
+                    <div class="form-group">
+                        <label>Implementation Type:</label>
+                        <select name="implType">
+                            <option value="">Select</option>
+                            <option value="level1">Level 1</option>
+                            <option value="level2">Level 2</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-section">
+                    <h3>Implementation Timeline</h3>
+                    <div class="timeline-table">
+                        <div class="form-row">
+                            <div class="form-group"><label>Milestone</label></div>
+                            <div class="form-group"><label>Target Date</label></div>
+                            <div class="form-group"><label>Responsible Party</label></div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group"><span>Procurement Complete</span></div>
+                            <div class="form-group"><input type="date" name="procDate"></div>
+                            <div class="form-group"><input type="text" name="procParty"></div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group"><span>Vendor Onboarding</span></div>
+                            <div class="form-group"><input type="date" name="onboardDate"></div>
+                            <div class="form-group"><input type="text" name="onboardParty"></div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group"><span>Pilot Program Start</span></div>
+                            <div class="form-group"><input type="date" name="pilotStartDate"></div>
+                            <div class="form-group"><input type="text" name="pilotStartParty"></div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group"><span>Pilot Program End</span></div>
+                            <div class="form-group"><input type="date" name="pilotEndDate"></div>
+                            <div class="form-group"><input type="text" name="pilotEndParty"></div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group"><span>Full Deployment Decision</span></div>
+                            <div class="form-group"><input type="date" name="decisionDate"></div>
+                            <div class="form-group"><input type="text" name="decisionParty"></div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group"><span>Full Deployment</span></div>
+                            <div class="form-group"><input type="date" name="deployDate"></div>
+                            <div class="form-group"><input type="text" name="deployParty"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-section">
+                    <h3>Pilot Program Design</h3>
+                    <div class="form-group">
+                        <label>Pilot Duration:</label>
+                        <input type="text" name="pilotDuration">
+                    </div>
+                    <div class="form-group">
+                        <label>Pilot Participants/Departments:</label>
+                        <input type="text" name="pilotParticipants">
+                    </div>
+                    <div class="form-group">
+                        <label>Pilot Design and Methodology:</label>
+                        <textarea name="pilotDesign" rows="4" placeholder="Describe the pilot program structure..."></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label>Success Criteria and Metrics:</label>
+                        <textarea name="successCriteria" rows="4" placeholder="Define specific, measurable criteria for evaluating pilot success..."></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label>Data Collection and Evaluation Plan:</label>
+                        <textarea name="dataCollection" rows="4" placeholder="Describe how data will be collected, analyzed, and reported..."></textarea>
+                    </div>
+                </div>
+
+                <div class="form-section">
+                    <h3>Safeguards and Risk Mitigation</h3>
+                    <div class="form-group">
+                        <label>Human Oversight Framework:</label>
+                        <textarea name="humanOversight" rows="4" placeholder="Detail the human oversight model..."></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label>Bias Monitoring and Fairness Assessment:</label>
+                        <textarea name="biasMonitoring" rows="4" placeholder="Describe procedures for monitoring and addressing potential bias..."></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label>Security and Privacy Protections:</label>
+                        <textarea name="security" rows="4" placeholder="Outline data security measures, privacy protections, access controls..."></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label>Contingency and Rollback Procedures:</label>
+                        <textarea name="contingency" rows="4" placeholder="Describe conditions under which the pilot would be suspended or terminated..."></textarea>
+                    </div>
+                </div>
+
+                <div class="form-section">
+                    <h3>Accountability Structure</h3>
+                    <div class="form-group">
+                        <label>Primary Decision Authority:</label>
+                        <input type="text" name="decisionAuthority">
+                    </div>
+                    <div class="form-group">
+                        <label>Approval Required From:</label>
+                        <input type="text" name="approvalRequired">
+                    </div>
+                    <div class="form-group">
+                        <label>Escalation Path for Issues:</label>
+                        <input type="text" name="escalationPath">
+                    </div>
+                    <div class="form-group">
+                        <label>Day-to-Day Oversight:</label>
+                        <input type="text" name="dailyOversight">
+                    </div>
+                    <div class="form-group">
+                        <label>Technical Oversight:</label>
+                        <input type="text" name="techOversight">
+                    </div>
+                    <div class="form-group">
+                        <label>Compliance Oversight:</label>
+                        <input type="text" name="complianceOversight">
+                    </div>
+                    <div class="form-group">
+                        <label>Community and Stakeholder Engagement:</label>
+                        <textarea name="communityEngagement" rows="4" placeholder="Describe how affected communities will be informed, consulted, and involved..."></textarea>
+                    </div>
+                </div>
+
+                <div class="form-section">
+                    <h3>Resource Requirements</h3>
+                    <div class="form-group">
+                        <label>Estimated Costs:</label>
+                        <input type="text" name="costs" placeholder="$">
+                    </div>
+                    <div class="form-group">
+                        <label>Source of Funding:</label>
+                        <input type="text" name="funding">
+                    </div>
+                    <div class="form-group">
+                        <label>Staff Time Required:</label>
+                        <input type="text" name="staffTime">
+                    </div>
+                    <div class="form-group">
+                        <label>Training Needs:</label>
+                        <input type="text" name="trainingNeeds">
+                    </div>
+                    <div class="form-group">
+                        <label>IT Support Required:</label>
+                        <input type="text" name="itSupport">
+                    </div>
+                    <div class="form-group">
+                        <label>Integration Requirements:</label>
+                        <input type="text" name="integration">
+                    </div>
+                </div>
+
+                <div class="form-section">
+                    <h3>Next Steps and Approvals</h3>
+                    <div class="form-group">
+                        <label>Immediate Next Actions:</label>
+                        <textarea name="nextActions" rows="3"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label>Required Approvals:</label>
+                        <input type="text" name="requiredApprovals">
+                    </div>
+                    <div class="form-group">
+                        <label>Expected Implementation Start Date:</label>
+                        <input type="date" name="startDate">
+                    </div>
+                </div>
+
+                <div class="form-section signature-section">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Implementation Lead Signature:</label>
+                            <input type="text" name="leadSignature">
+                            <label>Date:</label>
+                            <input type="date" name="leadDate">
+                        </div>
+                        <div class="form-group">
+                            <label>Approving Authority Signature:</label>
+                            <input type="text" name="approverSignature">
+                            <label>Date:</label>
+                            <input type="date" name="approverDate">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-actions">
+                    <button type="button" class="btn btn-secondary" onclick="saveFormData('implementationMemo')">Save Progress</button>
+                    <button type="button" class="btn btn-primary" onclick="window.print()">Print Memo</button>
+                </div>
+            </form>
+
+            <div class="nav-buttons">
+                <a href="#appendixF" class="btn btn-secondary" onclick="navigateTo('appendixF')">Previous Appendix</a>
+                <a href="#appendixH" class="btn btn-primary" onclick="navigateTo('appendixH')">Next Appendix</a>
+            </div>
+        </section>
+
+        <!-- APPENDIX H - Ongoing Monitoring -->
+        <section id="appendixH" class="section">
+            <div class="section-header">
+                <div class="phase-badge">Appendix H</div>
+                <h1>Ongoing Monitoring & Assessment</h1>
+            </div>
+
+            <div class="requirement-box">
+                <h3>Scheduled Reassessment</h3>
+                <p><strong>Substantial Risk Systems:</strong> A reassessment must be conducted <strong>annually</strong>.</p>
+            </div>
+
+            <div class="requirement-box highlight">
+                <h3>Triggered Reassessment</h3>
+                <p>You must immediately return to conduct a new, full assessment if ANY of the following events occur:</p>
+                <ul>
+                    <li><strong>System Changes:</strong> An update changes the system's core functionality, learning processes, or decision logic.</li>
+                    <li><strong>Scope Expansion:</strong> The system is applied to new use cases or new populations.</li>
+                    <li><strong>Performance Issues:</strong> There is evidence of unexpected behaviors, systematic errors, or performance degradation.</li>
+                    <li><strong>Rights Concerns:</strong> Bias, disparate impacts, or constitutional compliance issues are identified.</li>
+                    <li><strong>Environmental Changes:</strong> Relevant laws, policies, or the human rights environment shift.</li>
+                </ul>
+            </div>
+
+            <div class="info-box danger">
+                <h3>Risk Escalation Protocol</h3>
+                <p><strong>If Reclassified to a Higher Risk Level:</strong> You must immediately implement all requirements for the new, higher level. There is no grace period for compliance.</p>
+                <p><strong>If Reclassified as Prohibited:</strong> Cease operations of the system immediately. Follow the protocol in Appendix B.</p>
+            </div>
+
+            <h3>Monitoring Checklist</h3>
+            <form id="monitoringChecklist" class="checklist-form">
+                <label class="checkbox-item"><input type="checkbox"> System performance metrics are being tracked regularly</label>
+                <label class="checkbox-item"><input type="checkbox"> Demographic performance is monitored for disparities</label>
+                <label class="checkbox-item"><input type="checkbox"> Error rates and types are documented</label>
+                <label class="checkbox-item"><input type="checkbox"> Override decisions are logged with rationales</label>
+                <label class="checkbox-item"><input type="checkbox"> User feedback is collected and reviewed</label>
+                <label class="checkbox-item"><input type="checkbox"> Community concerns are documented and addressed</label>
+                <label class="checkbox-item"><input type="checkbox"> Training records are maintained and up to date</label>
+                <label class="checkbox-item"><input type="checkbox"> Security assessments are conducted regularly</label>
+                <label class="checkbox-item"><input type="checkbox"> Data retention policies are followed</label>
+                <label class="checkbox-item"><input type="checkbox"> Public reports are published as required</label>
+            </form>
+
+            <div class="nav-buttons">
+                <a href="#appendixG" class="btn btn-secondary" onclick="navigateTo('appendixG')">Previous Appendix</a>
+                <a href="#appendixI" class="btn btn-primary" onclick="navigateTo('appendixI')">Next Appendix</a>
+            </div>
+        </section>
+
+        <!-- APPENDIX I - Reference Materials -->
+        <section id="appendixI" class="section">
+            <div class="section-header">
+                <div class="phase-badge">Appendix I</div>
+                <h1>Reference Materials</h1>
+            </div>
+
+            <div class="form-section">
+                <h2>General Project Management Practices</h2>
+                <p>This AI-specific framework builds upon, and does not replace, standard project management and government procurement practices. Key practices that form the foundation for this framework include:</p>
+                <ul>
+                    <li><strong>Pre-Procurement Planning:</strong> Conducting a needs assessment, defining clear objectives, engaging stakeholders, and creating a budget and timeline.</li>
+                    <li><strong>Standard Procurement Process:</strong> Market research, RFI/RFP development, vendor evaluation against defined criteria, and contract negotiation.</li>
+                    <li><strong>Implementation Best Practices:</strong> Using a phased rollout approach, establishing user training programs, and managing change within the organization.</li>
+                    <li><strong>General Oversight and Monitoring:</strong> Regular performance reviews, budget tracking, and stakeholder communication.</li>
+                </ul>
+            </div>
+
+            <div class="form-section">
+                <h2>Resources</h2>
+                <p>These are resources that demonstrate good practices in technology procurement and AI governance to get you started:</p>
+                <ul class="resource-list">
+                    <li>
+                        <strong>Guide to Criminal Justice Technology Procurement - Recidiviz</strong>
+                        <p class="resource-url">https://www.recidiviz.org/updates/part-iii-tips-for-procuring-and-adopting-criminal-justice-technology</p>
+                    </li>
+                    <li>
+                        <strong>Public AI Governance Templates and Resources - Gov AI Coalition</strong>
+                        <p class="resource-url">https://www.sanjoseca.gov/your-government/departments-offices/information-technology/artificial-intelligence-inventory/govai-coalition/templates-resources</p>
+                    </li>
+                    <li>
+                        <strong>Government Procurement Excellence Resources</strong>
+                        <p class="resource-url">https://govlab.hks.harvard.edu/procurement-systems</p>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="cta-section">
+                <h2>Framework Complete</h2>
+                <p>You have reviewed all sections of the Criminal Justice AI Assessment Framework. Return to the beginning or revisit any phase as needed.</p>
+                <a href="#home" class="btn btn-large btn-primary" onclick="navigateTo('home')">Return to Home</a>
+            </div>
+
+            <div class="nav-buttons">
+                <a href="#appendixH" class="btn btn-secondary" onclick="navigateTo('appendixH')">Previous Appendix</a>
+                <a href="#home" class="btn btn-primary" onclick="navigateTo('home')">Back to Start</a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Help Modal -->
+    <div id="helpModal" class="modal hidden">
+        <div class="modal-content">
+            <span class="close-modal" id="closeHelp">&times;</span>
+            <h2>Need Help Navigating?</h2>
+            <div class="help-content">
+                <h3>Where should I start?</h3>
+                <ul>
+                    <li><strong>New to the framework?</strong> Start with the Home page and Top Takeaways to understand the overall approach.</li>
+                    <li><strong>Ready to assess a specific AI system?</strong> Begin with Phase 1: Readiness Assessment.</li>
+                    <li><strong>Looking for a specific form?</strong> Use the Appendices section in the sidebar.</li>
+                </ul>
+                <h3>Framework Flow</h3>
+                <p>Follow the phases in order:</p>
+                <ol>
+                    <li><strong>Phase 1:</strong> Assess your organization's readiness</li>
+                    <li><strong>Phase 2:</strong> Classify the AI system (risk & opportunity)</li>
+                    <li><strong>Phase 3:</strong> Navigate procurement with proper safeguards</li>
+                    <li><strong>Phase 4:</strong> Implement with appropriate requirements</li>
+                    <li><strong>Phase 5:</strong> Maintain ongoing monitoring and reassessment</li>
+                </ol>
+                <h3>Stuck on a Section?</h3>
+                <p>Each section includes prompts and guidance to help you think through the requirements. Look for:</p>
+                <ul>
+                    <li><strong>Info boxes:</strong> Important context and considerations</li>
+                    <li><strong>Action cards:</strong> Links to relevant forms and templates</li>
+                    <li><strong>Checklists:</strong> Step-by-step requirements to complete</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
