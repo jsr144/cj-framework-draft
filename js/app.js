@@ -340,7 +340,7 @@ function trackSectionVisit(sectionId) {
 }
 
 function updateProgressBar() {
-    const allSections = ['home', 'takeaways', 'phase1', 'phase2', 'phase3', 'phase4', 'phase5'];
+    const allSections = ['home', 'takeaways', 'phase1', 'phase2', 'phase3', 'phase4', 'phase5', 'nextSteps'];
     const visited = JSON.parse(localStorage.getItem('cj_ai_framework_visited') || '[]');
 
     const mainProgress = allSections.filter(s => visited.includes(s)).length;
